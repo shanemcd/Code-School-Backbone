@@ -17,6 +17,6 @@ window.TodoApp = Backbone.Router.extend({
   },
 
   show: function(id){
-    this.todoItems.focusOnTodoItem(id);
+    TodoList.focusOnTodoItem(id);
   }
 });

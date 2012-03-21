@@ -16,6 +16,7 @@ window.TodosView = Backbone.View.extend({
 
   addOne: function(todoItem){
     var todoView = new TodoView({model: todoItem});
-    this.$el.append(todoView.render().el); 
+    todoView.render()
+    this.$el.append(todoView.el); 
   }
 });
