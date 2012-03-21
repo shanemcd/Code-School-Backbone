@@ -4,15 +4,10 @@ window.TodoItems = Backbone.Collection.extend({
 
   initialize: function(){
     this.on('remove', this.hideModel, this);
-    this.on("add", this.showModel, this);
   },
 
   hideModel: function(model){
     model.trigger('hide');
-  },
-
-  showModel: function(model) {
-    console.log("model added to collection");
   },
 
   focusOnTodoItem: function(id) {
