@@ -1,0 +1,11 @@
+== Anatomy of Backbone sample application
+
+This is a sample application used on the CodeSchool course, Anatomy of 
+Backbone.js link:backbone.codeschool.com.
+
+
+== Getting Started
+
+1. Run `bundle install` to setup required gems.
+2. Run `rake db:setup` to create a sqlite database and initialize with data.
+2. Run `rails s` to run the server locally.
