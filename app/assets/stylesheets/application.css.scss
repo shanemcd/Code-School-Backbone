@@ -60,7 +60,14 @@ h3 input {
   position: absolute;
   top: 12px;
 }
-h3 a {
+
+h3 a.close{
+  color: #be7837;
+  text-decoration: none;
+  float: right;
+}
+
+h3 a.show {
   color: #be7837;
   display: block;
   font-size: 1.8em;

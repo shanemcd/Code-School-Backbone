@@ -1,9 +1,10 @@
 window.TodoView = Backbone.View.extend({
   template: _.template(
-    '<h3 class="<%= status %>"><input type=checkbox <%= status == "complete" ? "checked=checked" : "" %>/><%= description %><a href="/#todos/<% if (typeof(id) != "undefined") { %><%= id %><% } %>">☞</a></h3>'),
+    '<h3 class="<%= status %>"><input type=checkbox <%= status == "complete" ? "checked=checked" : "" %>/><%= description %><a class="close" href="#">x</a><a class="show" href="/#todos/<% if (typeof(id) != "undefined") { %><%= id %><% } %>">☞</a></h3>'),
 
   events: {
-    'change input': 'toggleStatus'
+    'change input': 'toggleStatus',
+    "click a.close": function(){this.model.destroy()}
   },
 
   initialize: function(){
@@ -12,7 +13,6 @@ window.TodoView = Backbone.View.extend({
   },
 
   render: function(){
-    console.log(this.model)
     this.$el.html(this.template(this.model.toJSON()));
     return this;
   },
