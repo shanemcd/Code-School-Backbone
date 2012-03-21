@@ -1,5 +1,5 @@
 window.TodoView = Backbone.View.extend({
-  template: _.template('<h3 class="<%= status %>"><input type=checkbox <%= status == "complete" ? "checked=checked" : "" %>/> <%= description %> <a href="/#todos/<%= id %>">☞</a></h3>'),
+  template: _.template('<h3 class="<%= status %>"><input type=checkbox <%= status == "complete" ? "checked=checked" : "" %>/> <%= description %> <a href="/#todos/">☞</a></h3>'),
 
   events: {
     'change input': 'toggleStatus'
