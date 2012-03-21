@@ -6,7 +6,6 @@ window.AddView = Backbone.View.extend({
   },
   initialize: function(){
     $(this.el).focus();
-    this.collection.on("add", this.addItem, this)
   },
 
   addItem: function(model){
